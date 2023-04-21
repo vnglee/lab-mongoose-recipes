@@ -50,7 +50,7 @@ mongoose
   })
 
   .then(() => {
-    return Recipe.deleteOne({ name: 'Carrot Cake' })
+    return Recipe.deleteOne({ title: 'Carrot Cake' })
   })
 
   .then((deleted) => {
