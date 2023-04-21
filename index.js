@@ -53,12 +53,15 @@ mongoose
     return Recipe.deleteOne({ name: 'Carrot Cake' })
   })
 
-  .then(() => {
-    mongoose.connection.close(function () {
-      console.log('Mongoose default connection closed');
-    });
+  .then((deleted) => {
+    console.log('recipe successfully deleted', deleted)
   })
-  
+  // .then(() => {
+  //   mongoose.connection.close(function () {
+  //     console.log('Mongoose default connection closed');
+  //   });
+  // })
+
   .catch(error => {
     console.error('Error connecting to the database', error);
   });
